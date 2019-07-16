@@ -1,0 +1,36 @@
+<%= form_with(model: sale, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :codigo %>
+    <%= form.number_field :cod %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detalle %>
+    <%= form.text_area :detail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoria %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor %>
+    <%= form.number_field :value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descuento %>
+    <%= form.number_field :discount %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Exento de IVA" %> <br />
+    <%= form.check_box :tax, {}, false, true %> <br />
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
